@@ -1,4 +1,4 @@
-# AI Sentiment Text Generator (Flask)
+# AI Sentiment Text Generator
 
 ## Overview
 This project is a Flask-based AI Text Generator that:
