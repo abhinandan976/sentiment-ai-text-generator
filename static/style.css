@@ -1,0 +1,109 @@
+/* Reset + fonts */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #111;
+  color: #fff;
+  padding: 12px 20px;
+}
+.navbar .logo {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 30px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+h1 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #222;
+}
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form */
+label {
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  color: #444;
+}
+textarea, select, input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+textarea { resize: vertical; min-height: 100px; }
+
+/* Button */
+.btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* Results */
+.result-sentiment {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #444;
+}
+.result-card {
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.05);
+}
+.result-card h3 {
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  background: #111;
+  color: #aaa;
+  font-size: 14px;
+}

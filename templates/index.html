@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AI Sentiment Text Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <h2 class="logo">AI TextGen</h2>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <main class="container">
+    <div class="card">
+      <h1>AI Sentiment Text Generator</h1>
+      <p class="subtitle">Generate text aligned with the sentiment of your input prompt.</p>
+
+      <form method="POST" class="form-card">
+        <label for="prompt">Enter Prompt</label>
+        <textarea id="prompt" name="prompt" placeholder="Type something here...">{{ prompt }}</textarea>
+
+        <label for="manual_sentiment">Sentiment</label>
+        <select id="manual_sentiment" name="manual_sentiment">
+          <option value="" {% if not manual_sentiment %}selected{% endif %}>Auto Detect</option>
+          <option value="positive" {% if manual_sentiment=='positive' %}selected{% endif %}>Positive</option>
+          <option value="negative" {% if manual_sentiment=='negative' %}selected{% endif %}>Negative</option>
+          <option value="neutral" {% if manual_sentiment=='neutral' %}selected{% endif %}>Neutral</option>
+        </select>
+
+        <label for="length">Text Length</label>
+        <input id="length" type="number" name="length" min="20" max="400" value="{{ length }}">
+
+        <button type="submit" class="btn">Generate</button>
+      </form>
+
+      {% if detected_sentiment %}
+        <p class="result-sentiment">Detected Sentiment: <strong>{{ detected_sentiment }}</strong></p>
+      {% endif %}
+
+      {% if result_text %}
+        <div class="result-card">
+          <h3>Generated Text</h3>
+          <p>{{ result_text }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 AI Sentiment Generator</p>
+    </div>
+  </footer>
+
+</body>
+</html>
